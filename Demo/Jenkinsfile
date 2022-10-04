@@ -1,0 +1,23 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('git clone') {
+            steps {
+                   git 'https://github.com/Shivab24/GitDemo.git'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo "im going to test my repo"
+            }
+        }
+        stage('build') {
+            steps {
+               echo "test is success and build completed"
+            }
+        }
+     
+    }
+}
+
